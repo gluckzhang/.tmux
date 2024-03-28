@@ -386,6 +386,16 @@ set -g history-limit 10000
 # set -g prefix C-a
 # bind C-a send-prefix
 
+# unbind C-a
+set -gu prefix2
+unbind C-a
+
+# copy-mode-vi
+bind -T copy-mode-vi y send -X copy-selection
+
+# toggle synchronize-panes
+bind-key C-s set-window-option synchronize-panes\; display-message "synchronize-panes is now #{?pane_synchronized,on,off}"
+
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
