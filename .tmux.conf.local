@@ -368,6 +368,15 @@ tmux_conf_copy_to_os_clipboard=false
 
 # this is the place to override or undo settings
 
+# 300ms should be enough for repeat timeout
+set -sg repeat-time 300
+
+# increase the step for pane resizing
+bind -r H resize-pane -L 8
+bind -r J resize-pane -D 8
+bind -r K resize-pane -U 8
+bind -r L resize-pane -R 8
+
 # increase history size
 set -g history-limit 10000
 
