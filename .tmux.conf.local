@@ -377,6 +377,12 @@ bind -r J resize-pane -D 8
 bind -r K resize-pane -U 8
 bind -r L resize-pane -R 8
 
+# do not repeat as there is a minor delay
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
 # increase history size
 set -g history-limit 10000
 
