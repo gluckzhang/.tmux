@@ -387,10 +387,10 @@ tmux_conf_urlscan_options="--compact --dedupe"
 set -sg repeat-time 300
 
 # increase the step for pane resizing
-bind -r H resize-pane -L 8
-bind -r J resize-pane -D 8
-bind -r K resize-pane -U 8
-bind -r L resize-pane -R 8
+bind -r H resize-pane -L 25
+bind -r J resize-pane -D 25
+bind -r K resize-pane -U 25
+bind -r L resize-pane -R 25
 
 # do not repeat as there is a minor delay
 bind h select-pane -L
@@ -422,6 +422,10 @@ unbind C-a
 
 # copy-mode-vi
 bind -T copy-mode-vi y send -X copy-selection
+
+# copy-mode-vi jump to the previous/next prompt
+bind -T copy-mode-vi [ send-keys -X previous-prompt
+bind -T copy-mode-vi ] send-keys -X next-prompt
 
 # toggle synchronize-panes
 bind-key C-s set-window-option synchronize-panes\; display-message "synchronize-panes is now #{?pane_synchronized,on,off}"
