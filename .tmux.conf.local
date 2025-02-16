@@ -376,7 +376,7 @@ tmux_conf_copy_to_os_clipboard=false
 # -- urlscan -------------------------------------------------------------------
 
 # options passed to urlscan
-tmux_conf_urlscan_options="--compact --dedupe"
+tmux_conf_urlscan_options="--compact --dedupe --reverse"
 
 
 # -- user customizations -------------------------------------------------------
